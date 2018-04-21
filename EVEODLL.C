@@ -51,6 +51,16 @@ struct node *head1=NULL;
 struct node *temp2;
 struct node *temp3;
 struct node *traverse;
+if(head==NULL)
+{
+ printf("Linked List is empty");
+}
+else if(head->next==NULL || head->next->next==NULL)
+{
+ head=head;
+}
+else
+{
 temp=head->next;
 temp1=(struct node *)malloc(sizeof(struct node));
 head1=temp1;
@@ -80,6 +90,7 @@ while(traverse->next!=NULL)
 traverse=traverse->next;
 }
 traverse->next=head1;
+}
 return;
 }
 
